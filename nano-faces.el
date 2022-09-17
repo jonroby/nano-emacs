@@ -189,7 +189,7 @@ background color that is barely perceptible."
                       :foreground nano-color-foreground
                       :background nano-color-background
                       :family     nano-font-family-monospaced
-                      :height       (* nano-font-size 10))
+                      ) ;; [JR-CHANGE]
   (set-face-attribute 'nano-face-critical nil
                       :foreground nano-color-foreground
                       :background nano-color-critical)
@@ -200,7 +200,7 @@ background color that is barely perceptible."
                           :foreground (face-foreground 'nano-face-default)
                           :background (face-background 'nano-face-default)
                           :family nano-font-family-proportional
-                          :height (* nano-font-size 10))
+                          ) ;; [JR-CHANGE]
   (if (display-graphic-p)
       (set-face-attribute 'nano-face-strong nil
                           :foreground (face-foreground 'nano-face-default)
